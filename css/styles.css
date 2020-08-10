@@ -103,10 +103,99 @@ body {
 
 /** END HEADER **/
 
+/* FOOTER */
+
+.panel-footer {
+    /* actually overriding Bootstrap css panel-footer class*/
+    margin-top: 30px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: #222;
+    border-top: 0;
+}
+
+.panel-footer div.row {
+    margin-bottom: 35px;
+}
+
+#hours, #address {
+    line-height: 2;
+}
+
+#hours>span, #address>span {
+    font-size: 1.3em;
+}
+
+#address p {
+    color: #557c3e;
+    font-size: 0.8em;
+    line-height: 1.8;
+}
+
+#testimonials {
+    font-style: italic;
+}
+
+#testimonials p:nth-child(2) {
+    margin-top: 25px;
+}
+
+/** END FOOTER **/
+
+/** HOME PAGE **/
+
+.container .jumbotron {
+    box-shadow: 0 0 50px #3F0C1F;
+    border: 2px solid #3F0C1F;
+}
+
+#menu-tile, #specials-tile, #map-tile {
+    height: 250px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    border: 2px solid #3F0C1F;
+    overflow: hidden;
+}
+
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+    box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile {
+    background: url('../images/menu-tile.jpg') no-repeat;
+    background-position: center;
+}
+
+#specials-tile {
+    background: url('../images/specials-tile.jpg') no-repeat;
+    background-position: center;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    background-color: #000000;
+    color: #ffffff;
+    opacity: .8;
+}
+
+/** END HOME PAGE **/
+
 /********** Large devices only **********/
 
 @media (min-width: 1200px) {
-
+    /* Home page */
+    .container .jumbotron {
+        background: url('../images/jumbotron_1200.jpg') no-repeat;
+        height: 675px;
+    }
+    /* End home page */
 }
 
 /********** Medium devices only **********/
@@ -121,10 +210,16 @@ body {
     .navbar-brand {
         padding-top: 5px;
     }
-    /* End Header */
-    #nav-list{
+    #nav-list {
         margin-top: 16px;
     }
+    /* End Header */
+    /* Home page */
+    .container .jumbotron {
+        background: url('../images/jumbotron_992.jpg') no-repeat;
+        height: 558px;
+    }
+    /* End home page */
 }
 
 /********** Small devices only **********/
@@ -133,6 +228,12 @@ body {
     #nav-list {
         margin-top: 30px;
     }
+    /* Home page */
+    .container .jumbotron {
+        background: url('../images/jumbotron_768.jpg') no-repeat;
+        height: 432px;
+    }
+    /* End home page */
 }
 
 /********** Extra small devices only **********/
@@ -155,4 +256,72 @@ body {
         margin-top: 5px;
     }
     /* End Header */
+    #collapsable-nav a {
+        /* Collaped nav menu glyphicon */
+        font-size: 1.2em;
+    }
+    #collapsable-nav a span {
+        font-size: 1em;
+        margin-right: 5px;
+    }
+    /* Call button */
+    #call-btn {
+        text-align: center;
+        background-color: #f6b319;
+        margin-left: 20px;
+        margin-right: 20px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+    }
+    #call-btn a {
+        color: #951C49;
+        font-size: 1.5em;
+    }
+    #xs-deliver {
+        text-transform: uppercase;
+        margin-top: 5px;
+        font-size: 0.8em;
+    }
+    /* End call button */
+    /* Footer */
+    .panel-footer section {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .panel-footer section:nth-child(3) {
+        margin-bottom: 0;
+        /* margin already exists on the whole row */
+    }
+    .panel-footer section hr {
+        width: 50%;
+    }
+    /* End Footer */
+    /* Home page */
+    .container .jumbotron {
+        margin-top: 30px;
+        padding: 0;
+    }
+    #menu-tile, #specials-tile {
+        width: 360px;
+        margin: 0 auto 15px;
+    }
+    /* End Home page */
+}
+
+/********** Super Extra small devices only (e.g. iPhone 4) **********/
+
+@media (max-width: 479px) {
+    /* Header */
+    .navbar-brand h1 {
+        /* Restaurant name */
+        padding-top: 5px;
+        font-size: 6vw;
+    }
+    /* End Header */
+    /* Home page */
+    #menu-tile, #specials-tile {
+        width: 280px;
+        margin: 0 auto 15px;
+    }
+    /* End Home page */
 }
