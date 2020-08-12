@@ -188,7 +188,8 @@ body {
 /** END HOME PAGE **/
 
 /** MENU CATEGORIES PAGE **/
-.category-tile{
+
+.category-tile {
     position: relative;
     border: 2px solid #3F0C1F;
     overflow: hidden;
@@ -196,7 +197,8 @@ body {
     height: 200px;
     margin: 0 auto 15px;
 }
-.category-tile span{
+
+.category-tile span {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -209,15 +211,66 @@ body {
     opacity: .8;
 }
 
-.category-tile:hover{
+.category-tile:hover {
     box-shadow: 0 1px 5px 1px #cccccc;
 }
 
-#menu-categories-title + div{
+#menu-categories-title+div {
     margin-bottom: 50px;
 }
 
 /** END MENU CATEGORIES PAGE **/
+
+/** SINGLE CATEGORY PAGE **/
+
+.menu-item-tile {
+    margin-bottom: 25px;
+}
+
+.menu-item-tile hr {
+    width: 80%;
+}
+
+.menu-item-tile .menu-item-price {
+    font-size: 1.1em;
+    text-align: right;
+}
+
+.menu-item-tile .menu-item-price span {
+    font-size: 0.6em;
+}
+
+.menu-item-photo {
+    position: relative;
+    border: 2px solid #3F0C1F;
+    overflow: hidden;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.menu-item-photo div {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #557c3e;
+    text-align: center;
+    width: 80px;
+}
+
+.menu-item-description {
+    padding-right: 30px;
+}
+
+h3.menu-item-title {
+    margin: 0 0 10px 0;
+}
+
+.menu-item-details {
+    font-size: .9em;
+    font-style: italic;
+}
+
+/** END SINGLE CATEGORY PAGE **/
 
 /********** Large devices only **********/
 
@@ -266,6 +319,11 @@ body {
         height: 432px;
     }
     /* End home page */
+    /* Single Category Page */
+    .menu-item-tile .menu-item-price {
+        margin-right: 32px;
+    }
+    /* End Single Category Page */
 }
 
 /********** Extra small devices only **********/
@@ -338,6 +396,19 @@ body {
         margin: 0 auto 15px;
     }
     /* End Home page */
+
+    /* Single Category Page */
+    .menu-item-photo{
+        margin: auto;
+    }
+    .menu-item-tile .menu-item-price {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .menu-item-description{
+        text-align: center;
+    }
+    /* End Single Category Page */
 }
 
 /********** Super Extra small devices only (e.g. iPhone 4) **********/
@@ -356,8 +427,7 @@ body {
         margin: 0 auto 15px;
     }
     /* End Home page */
-
-    .col-xxs-12{
+    .col-xxs-12 {
         position: relative;
         min-height: 1px;
         padding-right: 15px;
